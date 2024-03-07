@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Website Example</title>
+</head>
+
+<body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <!-- Navigation menu with access keys -->
+        <nav>
+            <ul>
+                <li><a href="#home" accesskey="1">Home</a></li>
+                <li><a href="#about" accesskey="2">About</a></li>
+                <li><a href="#services" accesskey="3">Services</a></li>
+                <li><a href="#contact" accesskey="4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Landmarks for screen reader navigation -->
+        <section role="banner" id="home">
+            <h1>Home Page</h1>
+            <p>Welcome to our website.</p>
+        </section>
+
+        <section role="main" id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our company.</p>
+        </section>
+
+        <section role="main" id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+
+        <section role="main" id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Organization</p>
+    </footer>
+</body>
+
+</html>
