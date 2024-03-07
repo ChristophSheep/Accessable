@@ -13,7 +13,7 @@ const template = `
 
     <ul>
         <li v-for="answer in data.answers">
-            <input :id="id + '_' + answer.id" v-model="state.answers_checked[answer.id]" type="checkbox" :disabled="state.locked"/>
+            <input class="me-1" :id="id + '_' + answer.id" v-model="state.answers_checked[answer.id]" type="checkbox" :disabled="state.locked"/>
             {{ answer.text }}
         </li>
     </ul>
@@ -21,9 +21,11 @@ const template = `
     <div v-if="state.correct === true"  class="alert alert-success" role="alert">Congratulation! Correct</div>
     <div v-if="state.correct === false" class="alert alert-info"    role="alert">Sorry! Wrong answer</div>
 
-    <button @click='submit' :disabled="state.locked">Submit</button>
-    <button @click='load'   :disabled="state.locked">Load</button>
-    <button @click='save'   :disabled="state.locked">Save</button>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button class="btn btn-primary" @click='submit' :disabled="state.locked">Submit</button>
+        <button class="btn btn-secondary" @click='load'   :disabled="state.locked">Load</button>
+        <button class="btn btn-secondary" @click='save'   :disabled="state.locked">Save</button>
+    </div>
 
 `
 // Actions
